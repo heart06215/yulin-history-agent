@@ -1,0 +1,62 @@
+# Local secrets and environments
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!.env.production.example
+!**/.env.example
+!**/.env.production.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+*.pid
+secrets/
+deploy/secrets/
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Build output
+apps/web/dist/
+apps/web/.wrangler/
+apps/web/tsconfig.tsbuildinfo
+apps/web/.vite/
+apps/web/.vinext/
+apps/web/.next/
+
+# Downloaded raw materials are not committed (see README 材料获取).
+data/raw/
+data/previews/
+data/backups/
+data/catalog.sqlite3*
+
+# Local backups, restore targets, exports and evaluation output stay private.
+.local-backups/
+.local-restore/
+.local-exports/
+.local-eval/
+.local-tests/
+exports/
+.batch-run.log
+.batch-run.pid
+.local-dev.lock
+.local-dev.json
+
+# Public source releases exclude all operational/private material by default.
+.agents/
+.codex/
+data/*
+!data/manifests/
+data/manifests/*
+!data/manifests/source-catalog.json
+!data/manifests/verified-volume-notes.json
+*.sqlite*
+*.db
+*.db-*
+docs/screenshots/

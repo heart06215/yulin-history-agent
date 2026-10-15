@@ -1,0 +1,81 @@
+/* Cinnabar pen + seal corners: use the existing heritage palette and motion scale. */
+.heritage-cursor-layer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  z-index: 1000;
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+  display: none;
+  contain: strict;
+}
+.heritage-cursor-halo, .heritage-cursor-press { position: absolute; top: 0; left: 0; width: 0; height: 0; }
+.heritage-cursor-layer::backdrop { background: transparent; pointer-events: none; }
+.heritage-cursor-halo { will-change: transform; }
+.heritage-cursor-layer[data-mode='hidden'] .heritage-cursor-halo { visibility: hidden; }
+.heritage-cursor-pen { position: absolute; width: 32px; height: 42px; left: -2px; top: -2px; overflow: visible; }
+.cursor-bamboo-shade { stop-color: var(--h-gold); }
+.cursor-bamboo-light { stop-color: var(--h-line); }
+.cursor-hair-shade { stop-color: var(--h-line); }
+.cursor-hair-light { stop-color: var(--h-paper-light); }
+.cursor-brush-outline { fill: none; stroke: var(--h-paper-light); stroke-width: 1.8; stroke-linejoin: round; }
+.cursor-brush-handle { stroke: var(--h-ink); stroke-width: .6; stroke-linejoin: round; }
+.cursor-brush-hair { stroke: var(--h-gold); stroke-width: .55; stroke-linejoin: round; }
+.cursor-brush-ink { fill: var(--h-red); }
+.cursor-brush-strands { fill: none; stroke: var(--h-gold); stroke-width: .5; stroke-linecap: round; opacity: .65; }
+.cursor-brush-collar { fill: var(--h-red-hover); stroke: var(--h-gold); stroke-width: .45; }
+.cursor-brush-bands { fill: none; stroke: var(--h-gold); stroke-width: .65; stroke-linecap: round; }
+.cursor-brush-grain { fill: none; stroke: var(--h-paper-light); stroke-width: .45; stroke-linecap: round; opacity: .65; }
+.heritage-cursor-seal { position: absolute; width: 32px; height: 32px; left: -16px; top: -16px; display: none; }
+.cursor-seal-body { fill: var(--h-red); stroke: var(--h-paper-light); stroke-width: 2; }
+.cursor-seal-letter { fill: none; stroke: var(--h-paper-light); stroke-width: 1.25; }
+.cursor-seal-center { fill: var(--h-gold); }
+.heritage-cursor-layer[data-mode='action'] .heritage-cursor-pen { display: none; }
+.heritage-cursor-layer[data-mode='action'] .heritage-cursor-seal { display: block; }
+.heritage-cursor-frame, .heritage-cursor-imprint {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: var(--h-gold);
+  stroke-width: 1;
+  stroke-linecap: square;
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(-8deg) scale(.75);
+}
+.heritage-cursor-frame { transition: transform var(--h-fast) var(--h-ease), opacity var(--h-fast) var(--h-ease); }
+.heritage-cursor-imprint { stroke: var(--h-red); stroke-width: 1.25; }
+.heritage-cursor-layer[data-mode='action'] .heritage-cursor-frame { opacity: .9; transform: translate(-50%, -50%) rotate(-8deg) scale(1); }
+
+@media (hover: hover) and (pointer: fine) and (forced-colors: none) {
+  html:has(.heritage-site), .heritage-site {
+    --h-cursor: url('/images/cursors/cinnabar-pen.svg') 2 2, auto;
+  }
+  /* Every hit target uses the theme, including text, form controls and pseudo-elements.
+     Cursor alone overrides older component rules; selection and focus remain native. */
+  html:has(.heritage-site), html:has(.heritage-site) body,
+  .heritage-site, .heritage-site *, .heritage-site *::before, .heritage-site *::after,
+  .heritage-site dialog::backdrop, .heritage-site input::file-selector-button {
+    cursor: var(--h-cursor) !important;
+  }
+  .heritage-site :is(a[href], button, summary, select, [role='button'], label[for], input[type='checkbox'], input[type='radio'], input[type='range'], input[type='file'], input[type='color']) {
+    --h-cursor: url('/images/cursors/cinnabar-seal.svg') 12 12, pointer;
+  }
+  /* JS sets readiness only while a drawn brush/seal is visible. On failure,
+     blur, keyboard use or cleanup, the normal/native fallback returns. */
+  html[data-heritage-cursor='ready'], html[data-heritage-cursor='ready'] .heritage-site,
+  html[data-heritage-cursor='ready'] .heritage-site * { --h-cursor: none; }
+  .heritage-cursor-layer { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heritage-cursor-frame { transition: none; }
+}
+@media print { .heritage-cursor-layer { display: none; } }

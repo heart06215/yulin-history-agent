@@ -1,0 +1,65 @@
+{
+  "generated_on": "2026-10-06",
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "key": "ancient-atlas-v3",
+      "transparent": true,
+      "prompt": "Use case: historical-scene. Asset type: transparent atlas of eight DIFFERENT horizontal architectural landscape vignettes for a refined Chinese Yulin local history exhibition. A square canvas divided into exactly TWO equal columns and FOUR equal rows. Each of the eight cells has one complete low horizontal vignette entirely inside its own cell with generous transparent margins. NO dividing lines, NO frames, NO text, NO labels, NO numbers. Genuine transparent background, naturally fading fine ground shadows. Style: highly precise architectural sketchbook drawing, dry etched pen, restrained mineral pigment, documentary proportions and detailed tactile masonry. Nothing isometric, no icon-like toy buildings, no glossy 3D, no game concept art, no artificial golden glow, no thick outer outlines, no pasted paper borders. All views are different, some oblique elevations and some grounded landscape perspectives. Northwest China, sparse semi-arid terrain and tan grey masonry. This is artistic exhibition imagery, not a historical reconstruction. Reading order left to right, top to bottom: 1) Neolithic Shimao stone settlement: massive dry-laid rubble rampart, irregular stepped bastion on bare loess ridge, no tile roofs. 2) Qin frontier outpost, rammed earth enclosure and low square watchtower with timber gate, wide open sandy ground. 3) Qin straight road: a broad worn track disappearing across loess plateau, very small distant beacon, no city gate. 4) Tongwancheng: pale sun-bleached rammed-earth fort ruins and squat abandoned bastion, eroded corners, sand and sparse shrubs. 5) Tang northwest prefectural city: simple grey-tiled timber tower over an adobe gateway, low courtyard roofs. 6) Song-Xia border fort: stone defensive enclosure and long rough wall strung across rugged sandy foothills, sparse signal posts. 7) Early Ming Yulin fortified city: heavy grey brick gate, stepped thick wall and many low courtyard houses. 8) Ming Zhenbeitai: monumental squat stepped square brick platform, four tapering broad tiers and a tiny pavilion on top, long wall beside it. Very restrained faded ochre and umber, low saturation.",
+      "source_path": "local-assets/generated/exec-ff72388f-e2db-481d-bc43-eda592945d78.png",
+      "outputs": [
+        "nodes/ancient-1.webp",
+        "nodes/ancient-2.webp",
+        "nodes/ancient-3.webp",
+        "nodes/ancient-4.webp",
+        "nodes/ancient-5.webp",
+        "nodes/ancient-6.webp",
+        "nodes/ancient-7.webp",
+        "nodes/ancient-8.webp"
+      ]
+    },
+    {
+      "key": "heritage-atlas-v3",
+      "transparent": true,
+      "prompt": "Use case: historical-scene. Asset type: transparent atlas of eight DIFFERENT horizontal architectural landscape vignettes for a refined Chinese Yulin local history exhibition. A square canvas divided into exactly TWO equal columns and FOUR equal rows. Each of the eight cells has one complete low horizontal vignette entirely inside its own cell with generous transparent margins. NO dividing lines, NO frames, NO text, NO labels, NO numbers. Genuine transparent background, naturally fading fine ground shadows. Style: highly precise architectural sketchbook drawing, dry etched pen, restrained mineral pigment, documentary proportions and detailed tactile masonry. Nothing isometric, no icon-like toy buildings, no glossy 3D, no game concept art, no artificial golden glow, no thick outer outlines, no pasted paper borders. All views are different, some oblique elevations and some grounded landscape perspectives. Northwest China, sparse semi-arid terrain and tan grey masonry. This is artistic exhibition imagery, not a historical reconstruction. Reading order left to right, top to bottom: 1) Late Ming famine-stricken rural northern Shaanxi: cracked bare fields, dilapidated adobe granary and impoverished earth cave dwellings, a dry well, no people. 2) Qing prefectural administrative compound: traditional restrained courtyard yamen gate with small grey tile roof and two old cypress trees. 3) Qing local gazetteer compilation: regional study courtyard, wooden lattice windows, desk visible through door, modest library pavilion, no books floating in foreground. 4) Early Republic school: long grey brick schoolhouse with tiled roofs and plain rectangular windows, modest yard. 5) 1920s revolutionary meeting place: a row of plain earth cave homes and a simple adobe courtyard at the foot of a loess hill. 6) Shaanxi border-area village: small clustered cave dwellings, rough stone path, fields and a willow, no flags or slogans. 7) Shajiadian northern Shaanxi wartime landscape: low dry ridges, winding track through a valley, a few cave homes, no troops. 8) 1949 renewed Yulin: traditional town gate opening onto a modest early modern street with telegraph poles, brick municipal school and tiny unobtrusive red flag. First three scenes subdued ochre/grey; scenes 4-7 entirely charcoal grey black-and-white; scene 8 limited earthy colour with one red accent.",
+      "source_path": "local-assets/generated/exec-f2748294-cda9-46f9-9220-f8666114bf71.png",
+      "outputs": [
+        "nodes/heritage-1.webp",
+        "nodes/heritage-2.webp",
+        "nodes/heritage-3.webp",
+        "nodes/heritage-4.webp",
+        "nodes/heritage-5.webp",
+        "nodes/heritage-6.webp",
+        "nodes/heritage-7.webp",
+        "nodes/heritage-8.webp"
+      ]
+    },
+    {
+      "key": "modern-atlas-v3",
+      "transparent": true,
+      "prompt": "Use case: historical-scene. Asset type: transparent atlas of eight DIFFERENT horizontal architectural landscape vignettes for a refined Chinese Yulin local history exhibition. A square canvas divided into exactly TWO equal columns and FOUR equal rows. Each of the eight cells has one complete low horizontal vignette entirely inside its own cell with generous transparent margins. NO dividing lines, NO frames, NO text, NO labels, NO numbers. Genuine transparent background, naturally fading fine ground shadows. Style: highly precise architectural sketchbook drawing, dry etched pen, restrained mineral pigment, documentary proportions and detailed tactile masonry. Nothing isometric, no icon-like toy buildings, no glossy 3D, no game concept art, no artificial golden glow, no thick outer outlines, no pasted paper borders. All views are different, some oblique elevations and some grounded landscape perspectives. Northwest China, sparse semi-arid terrain and tan grey masonry. This is artistic exhibition imagery, not a historical reconstruction. Reading order left to right, top to bottom: 1) 1950s sand control: simple adobe hut beside straw checkerboard dune stabilization, newly planted saplings and sandy hills. 2) Three-North shelterbelt project: sweeping rows of young hardy pines and poplars with a small forest station, green belts crossing pale sandy land. 3) Energy and infrastructure development: modest industrial factory roofs, clean utility pipes and distant cooling towers, poplar-lined access road, plausible northwestern landscape. 4) Modern Yulin civic centre: low contemporary cream/red civic buildings with broad plaza, planted trees and small red flags. 5) Hengshan district: northern Shaanxi county town with traditional courtyard quarter, contemporary apartment blocks against low loess hills. 6) Shenmu city: modest modern city bridge, riverbank park, red sandstone public building and planted green trees. 7) Public livelihood improvements: bright red-accented school and white community clinic beside accessible paved walkway, trees and modest residences. 8) Mu Us ecological restoration: irregular wetland bordered by green shelterbelt forest and small village with grass-stabilized sandy hills in distance. Natural greens become richer in later scenes; cream, muted blue and ceremonial red accents. Documentary editorial architectural illustration, calm even sunlight, no futuristic skyscrapers or tropical jungle.",
+      "source_path": "local-assets/generated/exec-8a5de6a2-f482-4fd8-bb6a-9ddd6c17ca25.png",
+      "outputs": [
+        "nodes/modern-1.webp",
+        "nodes/modern-2.webp",
+        "nodes/modern-3.webp",
+        "nodes/modern-4.webp",
+        "nodes/modern-5.webp",
+        "nodes/modern-6.webp",
+        "nodes/modern-7.webp",
+        "nodes/modern-8.webp"
+      ]
+    },
+    {
+      "key": "road-materials-v3",
+      "transparent": false,
+      "prompt": "Use case: photorealistic-natural. Asset type: two natural seamless top-down surface texture samples for web SVG road strokes. Generate a wide 2:1 image with TWO square samples side by side, no border, no text, no gap. LEFT HALF: authentic trodden northwestern Chinese sandy dirt road surface, fine compacted ochre sand mixed with small irregular pale pebbles, subtle diffuse dusty wear and tiny erosion flecks, light natural beige-brown, a few very faint soft wheel-wear variations but no obvious large rut. RIGHT HALF: old Chinese grey-tan flagstone and pebble paving, irregular rounded flattened small stones in assorted sizes, worn matte tops, tightly fitted organic joints filled with earthy grey dust, subtle edge wear, neither regular brick pattern nor grid. BOTH: perfectly perpendicular overhead orthographic view, diffuse flat daylight, full-bleed natural material, continuous texture with no central feature, no perspective, no vignette, no vegetation, no wetness, no shiny highlights, no computer-rendered rounded bevels, no exaggerated deep gaps. The texture should remain tactile but understated when used in a narrow winding 40-pixel-wide road. Fine natural photographic realism, not decorative illustration.",
+      "source_path": "local-assets/generated/exec-90b92697-2f8b-41ad-bc70-db4e20ef9ae4.png",
+      "outputs": [
+        "road-earth.webp",
+        "road-stone.webp"
+      ]
+    }
+  ],
+  "note": "原生 PNG 图集按格裁切并转 WebP，保留透明度；页面用 CSS mask 渐隐，无虚构实测对比。"
+}

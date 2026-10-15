@@ -1,0 +1,37 @@
+{
+  "edition": "v4 — open typography and Yulin city terminus",
+  "image": "/images/yulin-city-finale-v4.webp",
+  "dimensions": [2160, 728],
+  "bytes": 664610,
+  "kind": "Photographic art edit based on public Yulin city photographs; not a documentary photograph",
+  "generated_source": "local-assets/generated/exec-b5685082-df10-49ec-8b69-a6ce439fedc6.png",
+  "references": [
+    {
+      "publisher": "陕西日报 · 群众新闻网",
+      "title": "打造‘干净驼城’如何发力？怎样突破？",
+      "date": "2024-10-29",
+      "article_url": "https://www.sxdaily.com.cn/2024-10/29/content_10917543.html",
+      "image_url": "https://img.sxdaily.com.cn/2024-10/29/10917543_ce652b49-41cc-48be-a34f-0d76c13f05e5.png",
+      "local_reference": "apps/web/public/images/references/yulin-city-2024.png",
+      "purpose": "Primary city architecture and scale reference"
+    },
+    {
+      "publisher": "陕西日报",
+      "title": "真抓实干谋发展 奋勇争先启新篇",
+      "date": "2025-12-28",
+      "caption": "榆林中心城区榆溪河生态长廊。杨彬摄",
+      "article_url": "https://esb.sxdaily.com.cn/pad/content/202512/28/content_928492.html",
+      "image_url": "https://esb.sxdaily.com.cn/pad/pic/202512/28/928492_0b15f781-70e2-4d5c-aa93-0780ce999b12_l.jpg",
+      "local_reference": "apps/web/public/images/references/yulin-river-2025.jpg",
+      "purpose": "Small-area restored riverbank and ecological corridor reference"
+    }
+  ],
+  "prompt_summary": "Edit the real Yulin city reference into a 3:1, restrained architectural photography panorama. Built city and roads dominate, with approximately 80% urban content and only a small restored riverbank green corridor. Preserve recognizable local architectural scale, avoid fantasy towers, painting strokes and plastic rendering. No baked-in white vignette, titles or frame. Edge feathering and slight transparency are applied in CSS.",
+  "display": {
+    "position": "Within the main timeline, immediately after the ecological construction node",
+    "desktop": "Full-width panorama with soft top and bottom masks",
+    "mobile": "360px-tall urban-focused crop at 68% horizontal position",
+    "opacity": 0.94,
+    "attribution": "Visible caption identifies the image as an art edit and links both primary source articles"
+  }
+}

@@ -1,0 +1,161 @@
+/* One continuous route, natural material textures and feathered landscape layers. */
+.chronicle-river { position: relative; isolation: isolate; }
+.era-chapter { isolation: auto; background: linear-gradient(to bottom, var(--era-paper), var(--era-paper) calc(100% - 240px), var(--chapter-next-paper, var(--era-paper))); }
+.era-navigation { scrollbar-width: none; }
+.era-navigation::-webkit-scrollbar { display: none; }
+.chapter-heading { z-index: 3; }
+.chapter-scenery { z-index: 0; mask-image: linear-gradient(to bottom, transparent, #000 140px, #000 calc(100% - 200px), transparent); }
+.chapter-scenery img {
+  mask-image: radial-gradient(ellipse at center, #000 35%, #000c 55%, transparent 76%), linear-gradient(to right, transparent, #000 14%, #000 86%, transparent), linear-gradient(to bottom, transparent, #000 14%, #000 82%, transparent);
+  mask-composite: intersect;
+  mix-blend-mode: multiply;
+}
+.chapter-scenery .scenery-distance { width: 1650px; height: 550px; left: -200px; top: 40px; opacity: .43; }
+.chapter-scenery .scenery-ground { width: 1700px; height: 566px; right: -280px; bottom: -80px; opacity: .52; }
+.scenery-origins .scenery-distance { width: 2200px; left: -50px; opacity: .29; }
+.scenery-origins .scenery-ground { right: -1080px; opacity: .45; }
+.scenery-frontier .scenery-distance { left: -610px; opacity: .41; }
+.scenery-frontier .scenery-ground { right: -420px; }
+.scenery-revolution .chapter-scenery { opacity: .8; }
+.scenery-renewal .scenery-distance { left: -360px; opacity: .52; }
+.scenery-today .scenery-distance { left: -80px; opacity: .56; }
+.scenery-today .scenery-ground { bottom: 140px; opacity: .35; }
+.river-event-copy { isolation: isolate; }
+.node-architecture { width: 40%; opacity: .94; }
+.river-left .node-architecture { right: -2%; }
+.river-right .node-architecture { left: -2%; }
+.event-architecture { display: block; width: 100%; height: auto; aspect-ratio: 2; object-fit: contain; }
+.event-architecture, .architecture {
+  mask-image: radial-gradient(ellipse 66% 68% at 50% 48%, #000 40%, #000e 55%, transparent 76%), linear-gradient(to right, transparent, #000 18%, #000 82%, transparent), linear-gradient(to bottom, transparent, #000 14%, #000 82%, transparent);
+  mask-composite: intersect;
+}
+.tone-ancient .event-architecture { filter: sepia(.3) saturate(.38); opacity: .83; mix-blend-mode: multiply; }
+.tone-imperial .event-architecture { filter: sepia(.18) saturate(.48); opacity: .89; mix-blend-mode: multiply; }
+.tone-republic .event-architecture { filter: grayscale(1); opacity: .89; mix-blend-mode: multiply; }
+.tone-renewal .node-architecture, .tone-modern .node-architecture { opacity: .94; }
+.detail-visual .event-architecture { width: 380px; max-width: 85%; }
+
+@media (min-width: 768px) {
+  .river-event:not(.river-ecology) { height: auto; min-height: 216px; padding: 16px 0; }
+  .river-event-copy { position: relative; top: auto; transform: none; }
+  .river-right .river-event-copy { margin-left: auto; }
+  .river-event:not(.river-ecology) .river-node { top: calc(50% - 22px + var(--node-top) - 108px); }
+  .river-event:not(.river-ecology) .node-architecture { top: 50%; }
+}
+
+.continuous-road { inset: 0; display: block; width: 100%; height: 100%; z-index: 2; }
+.continuous-road .road-underlay { stroke: var(--h-road-earth); stroke-width: 40; opacity: .25; }
+.continuous-road .road-soft-shoulder { stroke-width: 52; opacity: .17; }
+.continuous-road .road-edge { stroke-width: 46; opacity: .4; }
+.continuous-road .road-surface { stroke-width: 42; }
+.continuous-road .road-texture { stroke-width: 42; opacity: .96; }
+.road-earth .road-soft-shoulder, .road-earth .road-edge { stroke: var(--h-road-earth-edge); }
+.road-stone .road-soft-shoulder, .road-stone .road-edge { stroke: var(--h-road-stone-edge); }
+.road-asphalt .road-soft-shoulder, .road-asphalt .road-edge { stroke: var(--h-road-kerb); }
+.continuous-road .road-markings { stroke-width: 1.8; stroke-dasharray: 12 21; opacity: .9; }
+.continuous-road.is-mobile .road-underlay { stroke-width: 23; }
+.continuous-road.is-mobile .road-soft-shoulder { stroke-width: 31; }
+.continuous-road.is-mobile .road-edge { stroke-width: 27; }
+.continuous-road.is-mobile .road-surface, .continuous-road.is-mobile .road-texture { stroke-width: 24; }
+.continuous-road.is-mobile .road-markings { stroke-width: 1.3; stroke-dasharray: 9 15; }
+
+/* The ecological answer is the last dated node in the river itself. */
+.river-ecology { height: 710px; margin-top: 12px; }
+.river-ecology::before {
+  content: ''; position: absolute; inset: -80px -50vw 0; z-index: 0;
+  background: linear-gradient(180deg, transparent, var(--h-oasis-paper) 32%, var(--h-oasis-paper));
+}
+.inline-oasis { position: relative; height: 100%; }
+.oasis-heading { position: relative; width: 37%; padding: 32px 0 0 3%; z-index: 3; }
+.oasis-heading .node-year { margin-top: 8px; }
+.river-ecology h3 { margin: 8px 0 16px; font-size: clamp(24px, 2.8vw, 34px); line-height: 1.5; }
+.tone-modern .river-ecology h3 button { color: var(--h-modern-green); }
+.oasis-heading h3 span { display: block; }
+.oasis-heading > p:last-of-type { font-size: 16px; color: var(--h-oasis-ink); }
+.oasis-landscape { position: absolute; width: 100%; height: 470px; top: 0; right: -12%; z-index: 1; pointer-events: none; }
+.oasis-main-image {
+  width: 100%; height: 100%; object-fit: cover; object-position: 65% center;
+  mask-image: radial-gradient(ellipse 62% 60% at 65% 48%, #000 26%, #000d 50%, transparent 78%), linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-composite: intersect;
+  mix-blend-mode: multiply;
+  opacity: .93;
+}
+.oasis-evidence { position: absolute; bottom: 110px; left: 3%; width: 39%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; color: var(--h-modern-green); z-index: 3; }
+.oasis-evidence > div { border-top: 1px solid color-mix(in srgb, var(--h-modern-green) 25%, transparent); padding-top: 14px; }
+.oasis-evidence strong { display: block; font: 600 30px/1.4 var(--h-font-serif); }
+.oasis-evidence strong small { font: 500 11px/1.5 var(--h-font-sans); margin-left: 2px; }
+.oasis-evidence span { display: block; font-size: 11px; line-height: 1.7; margin-top: 8px; }
+.oasis-story { position: absolute; right: 3%; bottom: 76px; width: 33%; color: var(--h-oasis-ink); z-index: 3; }
+.oasis-story p { font-size: 15px; line-height: 1.8; color: var(--h-oasis-ink); }
+.oasis-story a { display: inline-flex; align-items: center; gap: 8px; color: var(--h-modern-green); font-size: 12px; min-height: 44px; }
+.oasis-story .node-read { color: var(--h-modern-red); min-height: 44px; }
+.oasis-source-note { position: absolute; left: 3%; bottom: 36px; font-size: 10px; line-height: 1.8; color: var(--h-oasis-ink); z-index: 3; }
+
+/* Today's city opens onto the next part of the journey. */
+.river-terminus { position: relative; background: var(--h-oasis-paper); padding-top: 12px; }
+.terminus-heading { position: relative; max-width: 1120px; min-height: 238px; margin: auto; padding: 34px 3% 30px; display: flex; justify-content: space-between; align-items: center; }
+.terminus-title { position: relative; width: 39%; z-index: 3; }
+.terminus-title .section-kicker { color: var(--h-modern-red); font-size: 12px; }
+.terminus-title h2 { margin: 12px 0 0; font-size: clamp(34px, 3.4vw, 48px); font-weight: 600; line-height: 1.35; color: var(--h-modern-red-deep); }
+.terminus-intro { position: relative; width: 33%; z-index: 3; font-size: 16px; line-height: 1.85; color: var(--h-oasis-ink) !important; }
+.terminus-node { left: 50%; top: 75px; width: 60px; height: 60px; z-index: 4; }
+.river-terminus .terminus-node > span { display: grid; place-items: center; width: 40px; height: 40px; color: var(--h-paper-light); background: var(--h-modern-red); border: 3px solid var(--h-oasis-paper); outline: 1px solid color-mix(in srgb, var(--h-modern-red) 35%, transparent); outline-offset: 5px; font: 600 17px/1 var(--h-font-serif); }
+.terminus-city { position: relative; margin: -18px 0 0; z-index: 3; }
+.terminus-city > img { display: block; width: 100%; height: auto; aspect-ratio: 2160 / 728; object-fit: cover; opacity: .94; mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 90%, transparent); }
+.terminus-city figcaption { position: relative; max-width: 1120px; margin: auto; padding: 12px 3% 40px; display: flex; justify-content: space-between; align-items: center; gap: 24px; color: var(--h-oasis-ink); }
+.terminus-city figcaption > span { font: 500 17px/1.8 var(--h-font-serif); }
+.terminus-city figcaption small { font-size: 10px; line-height: 1.8; }
+.terminus-city figcaption a { display: inline-block; color: var(--h-oasis-ink); text-decoration: underline; text-underline-offset: 3px; padding: 8px 0; }
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .oasis-landscape { height: 380px; }
+  .oasis-evidence { width: 34%; }
+  .oasis-evidence strong { font-size: 26px; }
+  .oasis-evidence span { font-size: 10px; }
+}
+
+@media (max-width: 767px) {
+  .river-event:not(.river-ecology) { height: auto; min-height: 300px; padding-bottom: 68px; }
+  .chapter-heading { padding-left: 84px; }
+  .chapter-index { display: none; }
+  .chapter-heading h2 { font-size: 26px; }
+  .chapter-scenery .scenery-distance { width: 1180px; height: 420px; left: -420px; top: 120px; opacity: .26; }
+  .chapter-scenery .scenery-ground { width: 1080px; height: 360px; right: -430px; bottom: -40px; opacity: .35; }
+  .scenery-origins .scenery-ground { right: -820px; }
+  .scenery-today .scenery-ground { bottom: 320px; opacity: .26; }
+  .node-architecture { width: 280px; bottom: -6px; opacity: .72; }
+  .river-left .node-architecture, .river-right .node-architecture { right: -30px; left: auto; }
+  .tone-renewal .node-architecture, .tone-modern .node-architecture { opacity: .78; }
+  .river-ecology { height: auto; min-height: 960px; padding: 20px 0 24px 84px; margin-top: 0; }
+  .inline-oasis { height: auto; }
+  .oasis-heading { width: 100%; padding: 0; }
+  .river-ecology h3 { font-size: 27px; }
+  .oasis-heading > p:last-of-type { font-size: 15px; }
+  .oasis-landscape { position: relative; width: calc(100% + 60px); right: auto; top: auto; height: 280px; margin: 16px 0 0 -36px; }
+  .oasis-main-image { object-position: 65% center; mask-image: radial-gradient(ellipse 80% 62% at 55% 50%, #000 30%, #000c 50%, transparent 78%), linear-gradient(to right, transparent, #000 12%, #000 88%, transparent); }
+  .oasis-evidence { position: relative; bottom: auto; left: auto; width: 100%; margin-top: 16px; gap: 8px; }
+  .oasis-evidence strong { font-size: 24px; }
+  .oasis-evidence strong small { display: block; font-size: 10px; margin: 2px 0 0; }
+  .oasis-evidence span { font-size: 10px; }
+  .oasis-story { position: relative; bottom: auto; right: auto; width: 100%; margin-top: 24px; }
+  .oasis-story p { font-size: 14px; }
+  .oasis-story a, .oasis-story .node-read { font-size: 11px; }
+  .oasis-source-note { position: relative; display: block; left: auto; bottom: auto; font-size: 9px; margin-top: 12px; padding-bottom: 24px; }
+  .river-terminus { padding-top: 0; }
+  .terminus-heading { min-height: 304px; padding: 26px 24px 24px 108px; display: block; }
+  .terminus-title, .terminus-intro { width: 100%; }
+  .terminus-title h2 { font-size: 34px; }
+  .terminus-intro { font-size: 15px; margin-top: 18px; }
+  .terminus-node { left: 58px; top: 40px; }
+  .terminus-city { margin-top: -18px; }
+  .terminus-city > img { height: 360px; aspect-ratio: auto; object-position: 68% center; mask-image: linear-gradient(to bottom, transparent, #000 10%, #000 92%, transparent); }
+  .terminus-city figcaption { display: block; padding: 16px 24px 32px; }
+  .terminus-city figcaption > span { display: block; margin-bottom: 8px; }
+  .terminus-city figcaption a { padding: 12px 0; }
+}
+@media (max-width: 380px) {
+  .river-event:not(.river-ecology) { height: auto; min-height: 336px; }
+  .river-ecology { height: auto; min-height: 1070px; }
+  .river-ecology h3 { font-size: 24px; }
+  .oasis-evidence strong { font-size: 21px; }
+}

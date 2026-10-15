@@ -1,0 +1,175 @@
+/* Northwest landscape edition: denser chronology, material roads, living green. */
+:root {
+  --h-font-serif: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  --h-font-sans: 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-sans: var(--h-font-sans);
+  --h-desert-paper: #f0e3cb;
+  --h-desert-deep: #e8d3ac;
+  --h-desert-ink: #4b3924;
+  --h-desert-muted: #6c573b;
+  --h-gold: #74582e;
+  --h-modern-paper: #fff6ef;
+  --h-modern-red: #b32c32;
+  --h-modern-red-deep: #8c1d28;
+  --h-modern-green: #20583d;
+  --h-oasis-paper: #edf2e5;
+  --h-oasis-ink: #234633;
+  --h-road-earth-edge: #b5935b;
+  --h-road-earth: #d2b27a;
+  --h-road-grit: #8a693a;
+  --h-road-stone-edge: #a2937c;
+  --h-road-stone: #cabfa9;
+  --h-road-grout: #8f816b;
+  --h-road-asphalt: #58615d;
+  --h-road-kerb: #d2d1bd;
+  --h-road-marking: #f6edc9;
+  --h-road-shadow: #58482f1c;
+  --h-font-body-size: 16px;
+  --h-body-leading: 1.75;
+}
+body, button, input, textarea, select { font-family: var(--h-font-sans); }
+.heritage-site, .heritage-site p, .heritage-site h1, .heritage-site h2, .heritage-site h3 { letter-spacing: normal; }
+.heritage-site p { line-height: var(--h-body-leading); }
+.official-strip, .heritage-brand small, .hero-topline, .hero-bottom, .section-kicker,
+.chapter-range, .node-kind, .era-navigation small, .footer-brand { letter-spacing: .025em; }
+.heritage-brand strong { letter-spacing: .06em; }
+.history-hero { height: 600px; background: var(--h-desert-paper); }
+.hero-topline { padding-top: 24px; }
+.hero-title { margin-top: 16px; }
+.hero-kicker { letter-spacing: .08em; }
+.hero-title h1 { font-size: clamp(48px, 5.4vw, 74px); letter-spacing: .045em; text-indent: 0; line-height: 1.22; margin: 18px 0; }
+.hero-title p { max-width: calc(100% - 32px); margin: 0 auto 16px; padding: 8px 0; color: var(--h-desert-ink); font-size: 16px; line-height: 1.7; }
+.hero-title .heritage-button { position: relative; margin-top: 4px; }
+.hero-side-note { top: 112px; letter-spacing: .08em; }
+.hero-engraving { bottom: 24px; opacity: .82; mask-image: linear-gradient(to bottom, transparent 8%, transparent 35%, black 75%); }
+.chronicle-intro { padding-top: 40px; padding-bottom: 28px; }
+.chronicle-intro > p { font-size: 16px; line-height: 1.8; }
+.chronicle-toolbar { padding: 12px 0; }
+.history-search input, .history-filters button { font-size: 13px; }
+.era-navigation a { font-weight: 600; font-size: 15px; }
+.era-navigation small { font-size: 10px; }
+.era-chapter { --era-paper: var(--h-desert-paper); overflow: hidden; }
+.tone-ancient, .tone-imperial { background: var(--h-desert-paper); color: var(--h-desert-ink); }
+.tone-ancient p, .tone-imperial p { color: var(--h-desert-muted); }
+.tone-imperial { --era-paper: var(--h-aged); background: var(--h-aged); }
+.tone-republic { --era-paper: var(--h-paper-light); }
+.tone-renewal, .tone-modern { --era-paper: var(--h-modern-paper); --river-color: var(--h-modern-red); background: var(--h-modern-paper); }
+.chapter-heading { height: 136px; justify-content: start; padding: 0 6%; }
+.chapter-heading::before { display: none; }
+.chapter-heading > div, .tone-republic .chapter-heading > div,
+.tone-renewal .chapter-heading > div, .tone-modern .chapter-heading > div { background: transparent; padding: 0; }
+.chapter-heading h2 { font-size: 30px; font-weight: 600; letter-spacing: .015em; }
+.chapter-range, .chapter-heading > div > p:last-child { font-size: 12px; letter-spacing: normal; }
+.chapter-heading > div > p:last-child { font-size: 14px; }
+.chapter-index { background: var(--era-paper); }
+.chapter-count { right: 6%; color: var(--h-desert-muted); font-size: 13px; font-family: var(--h-font-serif); }
+.chapter-count small { display: block; font-family: var(--h-font-sans); font-size: 10px; text-align: right; margin-top: 6px; }
+.tone-modern .chapter-heading h2, .tone-renewal .chapter-heading h2 { color: var(--h-modern-red); }
+.tone-modern .chapter-index, .tone-renewal .chapter-index { background: var(--h-modern-red); color: var(--h-paper-light); border-color: var(--h-modern-red); outline-color: var(--h-red-soft); }
+.tone-modern .chapter-count, .tone-renewal .chapter-count { color: var(--h-modern-red); }
+.chapter-scenery { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: -1; }
+.chapter-scenery img { position: absolute; max-width: none; object-fit: cover; mask-image: linear-gradient(to bottom, transparent 8%, black 55%, transparent); }
+.scenery-distance { width: 1550px; height: 500px; left: -160px; top: 70px; opacity: .19; }
+.scenery-ground { width: 1750px; height: 584px; right: -220px; bottom: -100px; opacity: .3; }
+.scenery-origins .scenery-distance { width: 2100px; left: 0; object-position: left; opacity: .12; }
+.scenery-origins .scenery-ground { right: -1100px; opacity: .22; }
+.scenery-frontier .scenery-distance { left: -650px; top: 0; opacity: .2; }
+.scenery-frontier .scenery-ground { right: -450px; }
+.scenery-revolution .chapter-scenery { filter: grayscale(1); opacity: .5; }
+.scenery-renewal .scenery-distance { opacity: .25; left: -430px; }
+.scenery-today .scenery-distance { left: -120px; top: 40px; opacity: .3; }
+.tone-renewal .scenery-ground, .tone-modern .scenery-ground { opacity: .24; }
+.river-event { height: 216px; }
+.river-event-copy { width: 36%; top: var(--node-top); z-index: 3; }
+.river-left .river-event-copy { left: 3%; }
+.river-right .river-event-copy { right: 3%; }
+.river-event h3 { font-size: 22px; line-height: 1.5; margin-bottom: 8px; font-weight: 600; }
+.node-kind { font-size: 11px; }
+.node-year { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+.node-excerpt { font-size: var(--h-font-body-size); line-height: var(--h-body-leading); margin-bottom: 8px; text-align: left; color: var(--h-ink); }
+.tone-ancient .node-excerpt, .tone-imperial .node-excerpt { color: var(--h-desert-ink); }
+.node-read { font-size: 12px; min-height: 28px; }
+.river-left .river-node, .river-right .river-node { left: var(--node-left); top: calc(var(--node-top) - 22px); z-index: 4; }
+.river-node span { width: 14px; height: 14px; border-color: var(--h-desert-muted); background: var(--era-paper); outline-color: var(--h-line); }
+.tone-modern .river-node span, .tone-renewal .river-node span { border-color: var(--h-modern-red); }
+.tone-modern .node-year, .tone-renewal .node-year { color: var(--h-modern-red) !important; }
+.tone-modern .node-kind, .tone-renewal .node-kind { color: var(--h-modern-green); }
+.tone-modern .river-event h3 button, .tone-renewal .river-event h3 button { color: var(--h-modern-red-deep); font-family: var(--h-font-sans); font-weight: 600; }
+.tone-modern .node-read, .tone-renewal .node-read { color: var(--h-modern-red); }
+.node-architecture { width: 37%; top: var(--node-top); transform: translateY(-48%); opacity: .7; z-index: 1; pointer-events: none; }
+.river-left .node-architecture { right: -1%; }
+.river-right .node-architecture { left: -1%; }
+.landmark-main { position: relative; z-index: 2; }
+.architecture.has-variant { background-image: var(--scene-image); background-size: contain; background-position: center; }
+.tone-ancient .architecture { filter: sepia(.7) saturate(.35); opacity: .72; mix-blend-mode: multiply; }
+.tone-imperial .architecture { filter: sepia(.4) saturate(.4); opacity: .78; mix-blend-mode: multiply; }
+.tone-modern .node-architecture, .tone-renewal .node-architecture { opacity: .84; }
+.history-road { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; }
+.history-road path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.road-edge { stroke-width: 44; }
+.road-surface { stroke-width: 38; }
+.road-texture { stroke-width: 36; }
+.road-earth .road-edge { stroke: var(--h-road-earth-edge); }
+.road-earth .road-surface { stroke: var(--h-road-earth); }
+.road-stone .road-edge { stroke: var(--h-road-stone-edge); }
+.road-stone .road-surface { stroke: var(--h-road-stone); }
+.road-asphalt .road-edge { stroke: var(--h-road-kerb); stroke-width: 50; }
+.road-asphalt .road-surface { stroke: var(--h-road-asphalt); stroke-width: 43; }
+.road-markings { stroke: var(--h-road-marking); stroke-width: 2; stroke-dasharray: 12 17; }
+.supplementary-chronicle { background: var(--h-paper-light); border-top: 1px solid var(--h-line); padding: 0 max(24px, calc((100% - 1120px) / 2)); }
+.supplementary-chronicle summary { min-height: 72px; padding: 20px 8px; color: var(--h-red); font-size: 15px; cursor: pointer; }
+.supplementary-chronicle summary > span { float: right; display: inline-flex; align-items: center; gap: 12px; color: var(--h-muted); font-size: 12px; }
+.supplementary-chronicle > div { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; padding-bottom: 32px; }
+.supplementary-chronicle button { display: grid; grid-template-columns: 130px 1fr 16px; gap: 12px; text-align: left; align-items: center; background: transparent; border: 0; border-bottom: 1px solid var(--h-line); padding: 16px 0; color: var(--h-ink); min-height: 64px; }
+.supplementary-chronicle button > span { font-size: 11px; color: var(--h-gold); }
+.supplementary-chronicle button > strong { font-size: 13px; font-weight: 500; }
+.supplementary-chronicle button:hover > strong { color: var(--h-red); }
+.detail-body { font-size: 16px; line-height: 1.8; }
+.library-hero h1 { letter-spacing: .015em; }
+.library-hero p, .archive-invitation p, .library-footnote p { line-height: 1.75; font-size: 15px; }
+.archive-invitation { border: 0; background: color-mix(in srgb, var(--h-paper-light) 35%, transparent); }
+.assistant-scope button { min-height: 44px; }
+
+@media (min-width: 1600px) { .history-hero { height: 660px; } .hero-title { margin-top: 24px; } .hero-engraving { max-width: 2160px; } }
+@media (max-width: 1100px) { .river-event-copy { width: 37%; } .river-event h3 { font-size: 20px; } .node-excerpt { font-size: 15px; } }
+@media (max-width: 767px) {
+  .history-hero { height: 540px; }
+  .hero-title { margin-top: 8px; }
+  .hero-title h1 { font-size: 48px; }
+  .hero-title p { font-size: 14px; }
+  .hero-engraving { min-width: 1100px; bottom: 30px; opacity: .68; }
+  .hero-kicker { letter-spacing: .025em; }
+  .chronicle-intro { padding: 32px 24px 24px; }
+  .chronicle-intro > p { font-size: 15px; }
+  .history-filters { gap: 18px; }
+  .history-filters button { font-size: 12px; }
+  .chapter-heading { height: 120px; padding: 0; gap: 12px; }
+  .chapter-heading h2 { font-size: 26px; }
+  .chapter-heading > div > p:last-child, .chapter-range { font-size: 11px; }
+  .chapter-heading > div > p:last-child { font-size: 13px; }
+  .chapter-count { display: none; }
+  .chapter-scenery .scenery-distance { width: 1150px; height: 420px; left: -380px; top: 100px; opacity: .15; }
+  .chapter-scenery .scenery-ground { width: 1150px; height: 420px; right: -470px; bottom: -80px; opacity: .21; }
+  .scenery-origins .scenery-ground { right: -950px; }
+  .river-events::before { display: none; }
+  .river-event { height: 300px; min-height: 300px; padding: 20px 0 24px 84px; }
+  .river-event-copy { top: auto; transform: none; width: 100%; }
+  .river-left .river-event-copy, .river-right .river-event-copy { left: auto; right: auto; }
+  .river-event h3 { font-size: 20px; line-height: 1.5; }
+  .node-year { font-size: 14px; }
+  .node-excerpt { font-size: 15px; line-height: 1.75; }
+  .node-read { min-height: 44px; }
+  .river-left .river-node, .river-right .river-node { top: 20px; left: var(--mobile-node-left); }
+  .node-architecture { width: 230px; top: auto; bottom: 6px; transform: none; opacity: .22; z-index: 0; }
+  .river-left .node-architecture, .river-right .node-architecture { right: -50px; left: auto; }
+  .tone-modern .node-architecture, .tone-renewal .node-architecture { opacity: .24; }
+  .supplementary-chronicle summary { font-size: 14px; }
+  .supplementary-chronicle summary > span { float: none; display: flex; margin: 8px 0 0 16px; font-size: 11px; }
+  .supplementary-chronicle > div { grid-template-columns: 1fr; }
+  .supplementary-chronicle button { grid-template-columns: 84px 1fr 14px; gap: 8px; }
+  .assistant-scope { padding: 8px 16px; }
+}
+@media (max-width: 380px) {
+  .river-event { height: 336px; min-height: 336px; }
+  .river-left .river-node, .river-right .river-node { top: 25px; }
+}

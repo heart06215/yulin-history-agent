@@ -1,0 +1,11 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "Use case: historical-scene. Create a square 2-by-2 ATLAS on a genuinely transparent background, four isolated finely hand-drafted architectural vignettes, equal-size quadrants, no text or grid lines, generous transparent margins around each. Each vignette is horizontally elongated and centered inside its quadrant. TOP LEFT: authentic northwestern Chinese prehistoric Shimao-type archaeological dry-stone hilltop settlement RUINS, low collapsed rubble walls, stepped rocky earthen terrace, ochre ground, tiny excavated gate opening with rough lintel; absolutely NO tall castle, no European battlements, no semicircular medieval stone arches. TOP RIGHT: a Qin-Han frontier RAMMED-EARTH beacon platform on loess ground, squat square battered sides with sparse wooden fencing and rough watch structures, a few dry desert shrubs, NOT a European fort, NOT a grey castle. BOTTOM LEFT: a restrained Tang-Song northwestern Chinese frontier town gate: massive tamped ochre wall, timber gatehouse with modest authentic Chinese grey tiled hipped roof, a few low adobe dwellings, calm desert horizon. BOTTOM RIGHT: a contemporary northwestern Chinese civic cultural centre and public square with modest red and cream architectural detailing, green poplar trees, landscaped park and small apartment buildings behind, REALISTIC ORDINARY CITY, no futuristic megatowers. Dry fine pen and copperplate engraving contours with carefully controlled restrained Chinese mineral colours. Historical scenes faded ochre and charcoal, modern scene brighter green/red/cream. All are artworks, not photographs. Transparent cutout silhouettes with soft natural ground edges. No frames, lettering, watermark, glossy 3D, cinematic lighting, fantasy architecture, painterly AI mush, or cartoony icons. Maintain exact four-cell layout with no subject crossing between cells.",
+  "outputs": [
+    "apps/web/public/images/stone-ruins.webp",
+    "apps/web/public/images/han-beacon.webp",
+    "apps/web/public/images/tang-gate.webp",
+    "apps/web/public/images/civic-centre.webp"
+  ],
+  "processing": "按原生四格剪影图集分离透明素材，并转换为 WebP；保留原始 PNG。"
+}

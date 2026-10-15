@@ -1,0 +1,53 @@
+{
+  "testedAt": "2026-10-07",
+  "widths": [
+    {
+      "layers": 1,
+      "overlayPointerEvents": "none",
+      "overlayWidth": 304.8000183105469,
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "layers": 1,
+      "overlayPointerEvents": "none",
+      "overlayWidth": 752.7999877929688,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "layers": 1,
+      "overlayPointerEvents": "none",
+      "overlayWidth": 1264.800048828125,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "layers": 1,
+      "overlayPointerEvents": "none",
+      "overlayWidth": 1904.800048828125,
+      "scrollWidth": 1905,
+      "width": 1920
+    }
+  ],
+  "interactionChecks": {
+    "blankArea": "rest with gold glint",
+    "navigation": "action with seal frame",
+    "click": "press position updates to pointer coordinates",
+    "search": "native text cursor; search and clear succeed",
+    "keyboard": "Tab preserves visible focus and hides decoration",
+    "dialog": "text cursor with hidden decoration; Escape closes",
+    "routeChange": "one cursor layer after library and home navigation"
+  },
+  "mediaFallbacks": {
+    "touch": "CSS and pointer-type guard reviewed; no touch device emulation performed",
+    "reducedMotion": "CSS and matchMedia guard reviewed; no OS preference override performed",
+    "forcedColors": "native cursor fallback; code reviewed"
+  },
+  "frontendChecks": [
+    "TypeScript passed",
+    "lint passed",
+    "Node production build passed"
+  ],
+  "consoleErrors": 0
+}

@@ -1,0 +1,24 @@
+{
+  "generated_on": "2026-10-06",
+  "reference": {
+    "url": "https://yl.wenming.cn/jrtj/202512/W020251210331559196138.jpg",
+    "local_file": "apps/web/public/images/zhenbeitai-reference.jpg",
+    "purpose": "镇北台实际形制参考，未用于页面展示"
+  },
+  "assets": [
+    {
+      "file": "apps/web/public/images/yulin-engraving.png",
+      "purpose": "首页档案版画",
+      "prompt": "Use case: historical-scene. Asset type: panoramic header background for a refined Chinese public-history website, 3:1 wide composition.\nInput image: real aerial photograph of Zhenbeitai, architectural reference ONLY, preserve its recognizable square stepped masonry tower proportions and crenellated enclosing walls.\nPrimary request: A museum-quality restrained architectural copperplate engraving of Yulin's frontier town and Zhenbeitai, seen from a low elevated viewpoint, wide sweep of weathered earthen Great Wall across rounded northern Shaanxi loess hills, a few authentic modest tiled courtyard houses, faint distant mountains. Leave upper half almost empty. Fine dry etched lines and subtle faded stone-grey ink, antique archival print, nearly monochrome warm charcoal and dusty taupe on actual TRANSPARENT background. Buildings and hill silhouette concentrate in lower half, soft ragged print edges dissolve to transparency at bottom and sides. Delicate crosshatching, dry worn ink, irregular hand-engraved linework, accurate masonry and humble realistic roofs. No text, no lettering, no seals.\nConstraints: quiet sophisticated heritage editorial art; use the real photo to avoid invented Chinese fantasy landmarks. Absolutely no oil painting, watercolor washes, digital concept art, 3D render, smooth airbrush, golden glow, cinematic haze, oversaturated orange-teal, cartoon, perfect glossy textures, curved fantasy pagodas, giant suns, red flags. Image should resemble a scanned 19th century architectural engraving, not AI illustration."
+    },
+    {
+      "file": "apps/web/public/images/architecture-atlas.png",
+      "purpose": "八组时代建筑艺术示意",
+      "prompt": "Use case: historical-scene. Asset type: architectural silhouette sprite atlas for a Chinese history timeline, 1600x1600 square, exactly TWO columns and FOUR rows, eight equal square cells, one centered illustration in each cell, all with actual transparent background. Leave 12% margins inside every cell; absolutely no overlap between cells, no labels, no frames, no text. Follow the fine archival copperplate / wood-engraving quality of a 19th century museum book: crisp dry etched linework and slight worn crosshatching, realistic structural proportions, mostly elegant silhouettes, not fantasy art.\nTop row left: ancient northern Chinese dry-stone fortified ruins with a squat gateway, pale faded taupe nearly monochrome.\nTop row right: Han dynasty northern frontier rammed-earth beacon tower and short wall on a low hill, pale faded taupe.\nSecond row left: Tang/Song modest fortified Chinese city gateway with simple authentic tiled timber watch roof, faded charcoal-taupe.\nSecond row right: Ming Zhenbeitai in Yulin, square FOUR stepped massive masonry platforms, crenellations, no tall fantasy pavilion, dusty light grey, based on reference photograph proportions.\nThird row left: Qing dynasty modest Yulin tiled-roof courtyard and drum-tower street gateway, archival sepia charcoal.\nThird row right: Republican era northern Shaanxi school courtyard with low two-storey masonry school building and arched yaodong cave dwellings, BLACK AND WHITE only.\nBottom row left: northern Shaanxi countryside, small yaodong homesteads, green shelterbelt forest and low irrigation bridge, gentle natural greens and earthen ochre, sober colored engraving.\nBottom row right: contemporary Yulin civic skyline, restrained modern office buildings, wind turbines and trees, rich but realistic forest green and muted blue, tiny red architectural details, colored architectural engraving.\nConstraints: No sky, no ground rectangle, fully transparent empty surrounding cells. Every illustration belongs strictly to its own equal 1/8 area. No plastic digital painting, no oil paint, no watercolor blobs, no 3D, no glossy texture, no golden glow, no giant moon or suns, no text or flags. Architectural silhouettes have clearly different period character. Ancient cells significantly less saturated than modern cells."
+    }
+  ],
+  "constraints": [
+    "不以建筑插画作为历史复原或考据证据",
+    "古代低饱和，民国灰度，现代彩色由网页样式控制"
+  ]
+}

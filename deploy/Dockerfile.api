@@ -1,0 +1,14 @@
+FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+WORKDIR /app
+COPY backend/requirements.lock /app/requirements.lock
+RUN pip install --no-cache-dir -r requirements.lock \
+    && groupadd --gid 10001 yulin \
+    && useradd --uid 10001 --gid 10001 --no-create-home yulin \
+    && mkdir /data && chown yulin:yulin /data
+COPY backend/app /app/backend/app
+USER yulin
+EXPOSE 8765
+# Trust only this deployment's edge proxy, never client-supplied forwarding headers.
+CMD ["uvicorn", "backend.app.main:app", "--host", "0.0.0.0", "--port", "8765", "--workers", "1", "--proxy-headers", "--forwarded-allow-ips", "172.30.0.2"]
